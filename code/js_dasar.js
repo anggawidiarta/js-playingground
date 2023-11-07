@@ -59,3 +59,9 @@ console.log(null ?? "s");
 for (let i = 0; i <= 10; i++) {
   console.log(`Fuck ${i}`);
 }
+
+let x = 0;
+do {
+  x++;
+  console.log(x);
+} while (x < 4);

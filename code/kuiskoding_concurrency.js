@@ -46,3 +46,9 @@ fetchUsername()
 /**
  * Abaikan kode di bawah ini
  */
+
+var createCounter = function(n) {
+  return function() {
+    return n++   
+  }
+};
