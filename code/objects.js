@@ -7,3 +7,7 @@ console.log(animal.type?.something);
 
 const sayHello = () => "Hello World";
 console.log(sayHello());
+
+class car {
+  constructor(name, car) {}
+}
