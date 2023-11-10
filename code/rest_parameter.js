@@ -25,3 +25,7 @@ function test() {
   return wow ?? "Test";
 }
 console.log(test());
+
+let arr = [1, 2, 3, 4, 5, 6, 7]; //rest parameter when using array
+
+console.log(summation(...arr));
