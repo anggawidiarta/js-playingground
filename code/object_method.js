@@ -8,5 +8,4 @@ const person = {
 };
 console.log(person.name);
 person.setName("messi");
-console.log(person.name) ;
- 
+console.log(person.name);
