@@ -1,4 +1,5 @@
 //destructuring array
+
 let names = ["a", "i", "u"];
 [a, i, u] = names;
 console.log(a);

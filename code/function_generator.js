@@ -23,12 +23,12 @@ for (const num of check) {
   console.log(num);
 }
 
-function giveMeRock(callback,name) {
+function giveMeRock(callback, name) {
   return callback(name);
 }
 
 console.log(
-  giveMeRock(function name(name) {
+  giveMeRock(function (name) {
     return `Hello ${name}`;
-  },'ARLONG')
+  }, "ARLONG")
 );

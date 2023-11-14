@@ -54,13 +54,13 @@ fetchUsername()
  * @param {number} n - The initial value of the counter.
  * @return {function} - Returns a function that when called increments the value of n.
  */
-var createCounter = function(n) {
+var createCounter = function (n) {
   /**
    * Anonymous function that increments the value of n by 1.
    *
    * @return {number} - Returns the incremented value of n.
    */
-  return function() {
-    return n++
-  }
+  return function () {
+    return n++;
+  };
 };
