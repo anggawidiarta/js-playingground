@@ -4,9 +4,7 @@ html,
 body {
     font-family: Raleway, sans-serif;
     width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
+
 }
 
 body {
@@ -15,12 +13,29 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
+
+.container {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
 
 .main-header {
     margin-bottom: 1.25em;
-    font-size: 48px;
+    font-size: 48px;   
+    /* text-shadow:rgba(197, 13, 197, 0.5); */
+
+}
+
+.counter {
+    justify-content: center;
+    margin-top: 2.5rem;
+    font-weight: bold;
 }
 
 .search-box {
