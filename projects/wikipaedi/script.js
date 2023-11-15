@@ -37,13 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
       const resultElement = document.createElement("div");
 
       // Add a class of "result" to the div.
-      resultElement.className = "result";
+      resultElement.className = "result animate__animated animate__fadeInUpBig";
 
       // Set the inner HTML of the div to include the title, snippet, and a link to the full Wikipedia page.
       resultElement.innerHTML = `
       <h3>${result.title}</h3>
       <p>${result.snippet}</p>
-      <a href="https://id.wikipedia.org/?curid=${result.pageid}" target="_blank">Read More</a>`;
+      <a href="https://id.wikipedia.org/?curid=${result.pageid}" target="_blank">Baca Selengkapnya</a>`;
 
       // Append the result div to the resultsContainer.
       resultsContainer.appendChild(resultElement);

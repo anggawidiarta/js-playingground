@@ -32,6 +32,8 @@ body {
 .main-header {
     margin-bottom: 1.25em;
     font-size: 48px;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
     /* text-shadow:rgba(197, 13, 197, 0.5); */
 
 }
