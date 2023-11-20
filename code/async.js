@@ -2,7 +2,7 @@
 
 // This function fetches data asynchronously
 // It returns a promise that resolves after a delay of 1 second
-async function fetchData() {
+const fetchData = async () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       // Log a message when data is fetched
@@ -11,7 +11,7 @@ async function fetchData() {
       resolve();
     }, 1000);
   });
-}
+};
 
 // This function fetches data and then does something with it
 // It uses the async/await syntax to wait for the data to be fetched before proceeding

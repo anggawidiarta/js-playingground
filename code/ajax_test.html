@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax</title>
+  </head>
+  <body>
+    <h1 id="response"></h1>
+    <script>
+      const displayResponse = (json) => {
+        const header = document.getElementById("response");
+        header.textContent = json.about;
+      };
+
+      const ajax = new XMLHttpRequest();
+      ajax.open("GET", "https://eo9iz7ghtgqfscd.m.pipedream.net/");
+      ajax.addEventListener("load", () => {
+        if (ajax.status === 200) {
+          const json = JSON.parse(ajax.responseText);
+          displayResponse(json);
+        } else {
+          displayResponse({ response: `Status Error : ${ajax.status}` });
+        }
+      });
+      ajax.send();
+    </script>
+  </body>
+</html>
