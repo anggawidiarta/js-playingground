@@ -9,7 +9,7 @@ const fetchData = async () => {
       console.log("Data fetched");
       // Resolve the promise
       resolve();
-    }, 1000);
+    }, 10000);
   });
 };
 
@@ -21,6 +21,7 @@ async function fetchDataAndDoSomething() {
   // Log a message when the async/await operation is done
   console.log("Async/Await done");
 }
+
 function sayHello(name, callback) {
   // Function to say hello with a delay of 3000ms
   setTimeout(() => {
@@ -40,6 +41,8 @@ function sayHello2(name, callback) {
     callback();
   }, 1000);
 }
+
+fetchDataAndDoSomething();
 
 // Call the sayHello function with the name "Anggi" and a callback function to log a message
 sayHello("Anggi", () => {
