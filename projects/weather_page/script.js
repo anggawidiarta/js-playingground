@@ -1,12 +1,17 @@
+const { WEATHER_API } = Object.assign({}, process.env);
 const container = document.querySelector(".container");
 const search = document.querySelector(".search-box button");
 const weatherBox = document.querySelector(".weather-box");
 const weatherDetails = document.querySelector(".weather-details");
 const error404 = document.querySelector(".not-found");
 
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
 search.addEventListener("click", async () => {
   // API Key for OpenWeatherMap
-  const APIKey = "dda1c7218df9e346c6f541c49a54fca7";
+  const APIKey = WEATHER_API;
 
   // Get the value of the input box
   const city = document.querySelector(".search-box input").value;
