@@ -1,17 +1,17 @@
-const { WEATHER_API } = Object.assign({}, process.env);
+// const { WEATHER_API } = Object.assign({}, process.env);
 const container = document.querySelector(".container");
 const search = document.querySelector(".search-box button");
 const weatherBox = document.querySelector(".weather-box");
 const weatherDetails = document.querySelector(".weather-details");
 const error404 = document.querySelector(".not-found");
 
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
-}
+// if (process.env.NODE_ENV !== "production") {
+//   require("dotenv").config();
+// }
 
 search.addEventListener("click", async () => {
   // API Key for OpenWeatherMap
-  const APIKey = WEATHER_API;
+  const APIKey = "dda1c7218df9e346c6f541c49a54fca7";
 
   // Get the value of the input box
   const city = document.querySelector(".search-box input").value;
@@ -71,6 +71,10 @@ search.addEventListener("click", async () => {
         image.src = "images/mist.png";
         break;
 
+      case "Drizzle":
+        image.src = "images/drizzle.png";
+        break;
+
       default:
         image.src = "";
     }
@@ -78,8 +82,8 @@ search.addEventListener("click", async () => {
     // Display the weather data
     temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
     description.innerHTML = `${json.weather[0].description}`;
-    humidity.innerHTML = `${json.main.humidity}%`;
-    wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
+    humidity.innerHTML = `${json.main.humidity} %`;
+    wind.innerHTML = `${parseInt(json.wind.speed)} Km/H`;
 
     // Show the weather box and details
     weatherBox.style.display = "";
