@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - 2</title>
+  </head>
+  <body>
+    <h1 class="main-header">
+      Main Head
+      <p class="sentence">Hello world</p>
+      <p class="sentence">Destroy World</p>
+    </h1>
+    <script>
+      const header = document.querySelector(".main-header");
+      const sentence = document.querySelectorAll("h1 p");
+      console.log(sentence);
+      for (let sen of sentence) {
+        sen.style.cssText = "font-size:18px";
+      }
+      //cara merubah kumpulan dari koleksi html element adalah melalui looping
+      // sentence[0].style.cssText = "font-size:18px";
+    </script>
+  </body>
+</html>

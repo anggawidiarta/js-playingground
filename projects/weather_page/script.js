@@ -82,7 +82,7 @@ search.addEventListener("click", async () => {
     // Display the weather data
     temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
     description.innerHTML = `${json.weather[0].description}`;
-    humidity.innerHTML = `${json.main.humidity} %`;
+    humidity.innerHTML = `${Math.floor(json.main.humidity)} %`;
     wind.innerHTML = `${parseInt(json.wind.speed)} Km/H`;
 
     // Show the weather box and details
