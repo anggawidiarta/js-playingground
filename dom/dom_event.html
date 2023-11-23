@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handler & Listener</title>
+  </head>
+  <body>
+    <header class="main-header" style="text-align: center">Mr Robot</header>
+    <div class="container">
+      <p>This Is Sentence</p>
+      <button id="press-me">Press Me Senpai</button>
+    </div>
+
+    <script>
+      const pressMe = document.getElementById("press-me");
+      const container = document.querySelector(".container");
+      pressMe.addEventListener("click", function () {
+        const div = document.createElement("div");
+        div.innerHTML = `<p>Hello Senpai</p>`;
+        container.appendChild(div);
+      });
+    </script>
+  </body>
+</html>
