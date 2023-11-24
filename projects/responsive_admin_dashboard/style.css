@@ -158,3 +158,145 @@ body {
     width: calc(48px-(4px*2));
     transition: all 0.3s ease;
 }
+
+.sidebar .side-menu li a .bx {
+    max-width: calc(60px-((4px+6px)*2));
+    display: flex;
+    font-size: 1.6rem;
+    justify-content: center;
+
+}
+
+.sidebar .side-menu li a.logout {
+    color: var(--danger);
+}
+
+.content {
+    position: relative;
+    width: calc(100%-230px);
+    left: 230px;
+    transition: all 0.3s ease;
+}
+
+.sidebar.close~.content {
+    width: calc(100%-60px);
+    left: 60px;
+}
+
+.content nav {
+    height: 56px;
+    background: var(--light);
+    padding: 0 24px 0 0;
+    display: flex;
+    align-items: center;
+    grid-gap: 24px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.content nav::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: -20px -20px 0 var(--light);
+}
+
+.content nav a {
+    color: var(--dark);
+
+}
+
+.content nav .bx.bx-menu {
+    cursor: pointer;
+    color: var(--dark);
+
+}
+
+.content nav form {
+    max-width: 400px;
+    width: 100%;
+    margin-right: auto;
+}
+
+.content nav form .form-input {
+    display: flex;
+    align-items: center;
+    height: 36px;
+}
+
+.content nav form .form-input input {
+    flex-grow: 1;
+    padding: 0 16px;
+    height: 100%;
+    border: none;
+    background: var(--grey);
+    border-radius: 36px 0 0 36px;
+    outline: none;
+    width: 100%;
+    color: var(--dark);
+}
+
+.content nav form .form-input button {
+    width: 80px;
+    height: 100%;
+    display: flex;
+    background: center;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary);
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 0 36px 36px 0;
+    cursor: pointer;
+}
+
+.content nav .notif {
+    font-size: 20px;
+    width: 25px;
+    height: 25px;
+    position: relative;
+}
+
+.content nav .notif .count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 20px;
+    height: 20px;
+    background: var(--danger);
+    border-radius: 50%;
+    color: var(--light);
+    border: 2px solid var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.content nav .profile {
+    margin-right: 55px;
+    font-size: 20px;
+    padding-top: 4px;
+    position: relative;
+}
+
+/* .content nav .profile .fi {
+   padding-left: -2.5px;
+   padding-top: 5px;
+   width: 25px;
+   height: auto;
+   max-width: 100%;
+} */
+/* a.profile .zigzag{
+    width: 550px;
+    height: fit-content;
+    padding-bottom: 85px;
+} */
