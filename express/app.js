@@ -7,10 +7,26 @@ const app = express();
 // Menentukan port server
 const port = 3000;
 
+app.set("view engine", "ejs");
+
 // Menangani permintaan GET ke rute root ("/")
 app.get("/", (req, res) => {
+  const mahasiswa = [
+    {
+      nama: "Angga",
+      email: "anggawidiarta55@gmail.com",
+    },
+    {
+      nama: "Lao",
+      email: "lao@gmail.com",
+    },
+    {
+      nama: "Leewulong",
+      email: "Lee@gmail.com",
+    },
+  ];
   // Mengirim "Hello World!" sebagai respon
-  res.send("Hello World!");
+  res.render("pages/index", { mahasiswa });
 });
 
 // Menangani permintaan GET ke rute "/about"
