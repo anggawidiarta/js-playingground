@@ -42,7 +42,7 @@ app.get("/about/product/:id", (req, res) => {
 });
 
 // Menangani permintaan GET ke rute "/about/product/shoes=converse"
-app.get("/about/product/shoes=converse", (req, res) => {
+app.get("/about/product/shoes=", (req, res) => {
   // Mengirim "Product Query : [query]" sebagai respon, di mana [query] adalah query yang diterima dari parameter rute
   res.send(`Product Query : ${req.query.shoes}`);
 });
