@@ -1,18 +1,25 @@
 const express = require("express");
 const router = express.Router();
 const Article = require("../models/article");
+// const article = require("../models/article");
 
 // router.get("/", (req, res) => {
 //   res.render("articles/index");
 // });
 router.get("/new", (req, res) => {
-  res.render("articles/new");
+  res.render("articles/new", { article: new Article() });
 });
 
-router.get("/:id", (req, res) => {});
+router.get("/:id", async (req, res) => {
+  const article = await Article.findById(req.params.id);
+  if (article == null) {
+    res.redirect("/");
+  }
+  res.render("articles/show", { article: article });
+});
 
 router.post("/", async (req, res) => {
-  const article = new Article({
+  let article = new Article({
     title: req.body.title,
     description: req.body.description,
     markdown: req.body.markdown,
@@ -20,7 +27,7 @@ router.post("/", async (req, res) => {
   try {
     article = await article.save();
     res.redirect(`/articles/${article.id}`);
-  } catch (error) {
+  } catch (e) {
     res.render("articles/new", { article: article });
   }
 });
