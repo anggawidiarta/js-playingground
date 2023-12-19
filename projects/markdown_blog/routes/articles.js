@@ -37,6 +37,7 @@ router.post("/", async (req, res) => {
     res.redirect(`/articles/${article.slug}`);
   } catch (e) {
     // If an error occurs, re-render the form view with the current data
+    console.log(e);
     res.render("articles/new", { article: article });
   }
 });
