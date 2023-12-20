@@ -4,6 +4,7 @@
     <!-- Meta tags providing document metadata -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./contract.ico" type="image/x-icon">
     <!-- Link to the Bootstrap CSS library -->
     <link
       rel="stylesheet"
@@ -43,6 +44,9 @@
           <a href="articles/<%= article.slug %>" class="btn btn-primary"
             >Read More</a
           >
+          <a href="articles/edit/<%= article.id %>" class="btn btn-info"
+            >Edit</a
+          >
 
           <!-- Form to delete the article -->
           <form
@@ -50,7 +54,7 @@
             method="post"
             class="d-inline"
           >
-            <button type="submit" class="btn btn-danger ">Delete</button>
+            <button type="submit" class="btn btn-danger">Delete</button>
           </form>
         </div>
       </div>
